@@ -15,7 +15,10 @@ spec:
       containers:
         - name: flask-application-pod
           image: gcr.io/api-project-249965614499/flask-application
+          imagePullPolicy: IfNotPresent
           resources:
             requests:
               cpu: 100m
               memory: 100Mi
+      nodeSelector:
+        node: "A"
