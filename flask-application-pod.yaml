@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: flask-application-pod
+  labels:
+    app: flask-application
+spec:
+  containers:
+  - name: flask-application
+    image: gcr.io/api-project-249965614499/flask-application
+
