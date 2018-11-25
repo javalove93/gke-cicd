@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: flask-application-repl
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: flask-application-pod
+  template:
+    metadata:
+      labels:
+        app: flask-application-pod
+    spec:
+      containers:
+        - name: flask-application-pod
+          image: gcr.io/api-project-249965614499/flask-application
+          resources:
+            requests:
+              cpu: 100m
+              memory: 100Mi
