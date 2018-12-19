@@ -2,17 +2,17 @@
 
 ## Container Registry login
 
-<code>
+~~~
   gcloud auth configure-docker
-</code>
+~~~
 
 ## Docker Build
 
-<code>
+~~~
   cat hello.py
   cat Docker file
   ./build.sh
-</code>
+~~~
 
 ## Docker Test
 
